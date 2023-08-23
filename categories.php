@@ -1,15 +1,14 @@
-<?php 
-/* 
+<?php
+/*
 Template Name: categories
 */
 ?>
 
 <?php get_header();?>
 
-
 <main class="main">
-    <div class="inner">     
-        <?php get_sidebar(); ?>       
+    <div class="inner">
+        <?php get_sidebar(); ?>
         <article class="post-content">
             <h1 class="post-content__title" id="Введение"><?php the_title()?></h1>
             <figure class="post-content__figure">
@@ -20,7 +19,7 @@ Template Name: categories
                     )
                 ); ?>
             </figure>
-            
+
             <?php
                 $content = get_the_content();
 
@@ -30,9 +29,9 @@ Template Name: categories
                 if (!empty($headings[0])) {
 
                     foreach ($headings[0] as $index => $heading) {
-                        $heading_id = 'heading-' . $index; 
-                        $heading_text = wp_strip_all_tags($heading); 
-                        $content = str_replace($heading, sprintf('<h2 id="%s">%s</h2>', $heading_id, $heading_text), $content); 
+                        $heading_id = 'heading-' . $index;
+                        $heading_text = wp_strip_all_tags($heading);
+                        $content = str_replace($heading, sprintf('<h2 id="%s">%s</h2>', $heading_id, $heading_text), $content);
                     }
 
                 }
