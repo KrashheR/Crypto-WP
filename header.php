@@ -45,7 +45,7 @@
                 </div>
             </nav>
         </div>
-        <?php if ( is_page_template( 'blog.php' || 'categories.php' ) ) : ?>
+        <?php if ( is_page_template( 'blog.php') || is_page_template( 'categories.php' ) ) : ?>
             <div class="header__progress-bar">
                 <div class="header__progress-handle"></div>
             </div>
