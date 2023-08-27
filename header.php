@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="На этом сайте вы можете найти самую актуальную информацию о криптовалютном рынке." />
+    <meta name="keywords" content="Криптовалюта, Биткоин, Эфириум, BTC, ETH, торговля криптовалютой, прогноз криптовалюты"/>
     <title><?php
         if ( is_front_page() ){
             bloginfo('name');
