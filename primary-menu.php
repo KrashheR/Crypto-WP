@@ -8,7 +8,6 @@ foreach ($categories as $category) {
     if (is_category($category->term_id) || in_category($category->term_id)) {
         $category_class = 'current-menu-item';
     }
-
     echo '<li class="' . $category_class . '"><a href="' . esc_url(home_url('/')) . '">' . $category->name . '</a></li>';
 }
 ?>
