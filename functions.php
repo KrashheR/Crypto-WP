@@ -74,6 +74,17 @@ function display_latest_posts($num_posts, $offset, $category) {
 	<?php }} wp_reset_postdata();
 }
 
+function highlight_category_for_single_post($classes, $item) {
+	if (is_single() && 'category' == $item->object) {
+			$post_categories = wp_get_post_categories(get_queried_object_id());
+			if (in_array($item->object_id, $post_categories)) {
+					$classes[] = 'current-menu-item';
+			}
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'highlight_category_for_single_post', 10, 2);
+
 
 function get_category_id() {
 	$current_url = wp_make_link_relative( home_url( add_query_arg( null, null ) ) );
