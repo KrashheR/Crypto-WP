@@ -126,20 +126,20 @@ class Category_Menu_Walker extends Walker_Nav_Menu {
 
 function exclude_search_page_by_title($query) {
 	if ($query->is_search && !is_admin()) {
-			$exclude_search_id = get_page_by_title('search', OBJECT, 'page')->ID;
-			$exclude_home_id = get_page_by_title('home', OBJECT, 'page')->ID;
+		$exclude_search_id = get_page_by_title('search', OBJECT, 'page')->ID;
+		$exclude_home_id = get_page_by_title('home', OBJECT, 'page')->ID;
 
-			$exclude_ids = array();
-			if ($exclude_search_id) {
-				$exclude_ids[] = $exclude_search_id;
-			}
-			if ($exclude_home_id) {
-				$exclude_ids[] = $exclude_home_id;
-			}
+		$exclude_ids = array();
+		if ($exclude_search_id) {
+			$exclude_ids[] = $exclude_search_id;
+		}
+		if ($exclude_home_id) {
+			$exclude_ids[] = $exclude_home_id;
+		}
 
-			if (!empty($exclude_ids)) {
-				$query->set('post__not_in', $exclude_ids);
-			}
+		if (!empty($exclude_ids)) {
+			$query->set('post__not_in', $exclude_ids);
+		}
 	}
 	return $query;
 }

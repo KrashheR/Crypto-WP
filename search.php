@@ -20,7 +20,6 @@ Template Post Type: post, page, product
                           <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
                         </div>
                     </a>
-
                 </li>
             <?php endwhile; ?>
         </ul>
