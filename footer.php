@@ -1,7 +1,7 @@
 <footer class="footer">
         <div class="inner">
             <nav class="navigation navigation_footer">
-                <a href="index.html" class="navigation__logo-link navigation__logo-link_footer">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="navigation__logo-link navigation__logo-link_footer">
                     <img class="footer__logo logo" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Логотип">
                 </a>
                 <?php
