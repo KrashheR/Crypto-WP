@@ -33,7 +33,7 @@
                 <div class="search-field">
                     <button class="search-field__button search-field__button_mobile" type="button" aria-label="Открыть строку поиска"></button>
                     <form class="search-field__form" action="<?php echo esc_url(home_url('/')); ?>" method="get">
-                        <input class="search-field__input-text" placeholder="Поиск..." type="search" name="Поле ввода для поиска" >
+                        <input class="search-field__input-text" placeholder="Поиск..." type="search" name="s" >
                         <button class="search-field__button" type="submit" title="Поиск" aria-label="Начать поиск по сайту"></button>
                     </form>
                 </div>
